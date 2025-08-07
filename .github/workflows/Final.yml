@@ -1,0 +1,18 @@
+name: build
+
+on:
+  push:
+    branches: 
+      - main
+jobs:
+  build: 
+    run-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - run: |
+         docker build -t shathaad33/FinalProject:$GITHUB_SHA .
+         docker push shathaad33/FinalProject:$GITHUB_SHA
