@@ -14,5 +14,5 @@ jobs:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - run: |
-         docker build -t shathaad33/FinalProject:$GITHUB_SHA .
-         docker push shathaad33/FinalProject:$GITHUB_SHA
+         docker build -t shathaad33/finalproject:$GITHUB_SHA .
+         docker push shathaad33/finalproject:$GITHUB_SHA
