@@ -1,5 +1,6 @@
 # Final Project – Flask Voting App with Docker and CI/CD
 
+
 You are provided with a basic Python Flask application (`app.py`) that allows users to vote between "Cats" and "Dogs". Votes are stored in a Redis cache.
 
   
